@@ -1,10 +1,10 @@
-import React, { createContext, useReducer } from 'react';
-import AppReducer from './AppReducer';
+import React, { createContext, useReducer } from "react";
+import AppReducer from "./AppReducer";
 
 // Initial state
 const initialState = {
-  transactions: []
-}
+  transactions: [],
+};
 
 // Create context
 export const GlobalContext = createContext(initialState);
@@ -15,15 +15,18 @@ export const GlobalProvider = ({ children }) => {
 
   function addTransaction(transaction) {
     dispatch({
-      type: 'ADD_TRANSACTION',
-      payload: transaction
+      payload: transaction,
     });
   }
 
-  return (<GlobalContext.Provider value={{
-    transactions: state.transactions,
-    addTransaction
-  }}>
-    {children}
-  </GlobalContext.Provider>);
-}
+  return (
+    <GlobalContext.Provider
+      value={{
+        transactions: state.transactions,
+        addTransaction,
+      }}
+    >
+      {children}
+    </GlobalContext.Provider>
+  );
+};

@@ -20,7 +20,7 @@ export const Transaction = ({ transaction }) => {
 
   return (
     <li className={'minus'}>
-      {transaction.text} <span>{'-'}{moneyFormatter(transaction.amount)}</span>
+      {transaction.text} <span>{'-'}{moneyFormatter(transaction.priceOfRefuel)}</span>
     </li>
   )
 }

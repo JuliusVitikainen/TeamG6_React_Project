@@ -2,6 +2,9 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 var idNumber = 0;
+export var totalRefuelQuantity = 0;
+export var totalExpenses = 0;
+export var totalRefuelDriveDistance = 0;
 
 export const RefuelExpense = () => {
   const [refuelQuantity, setRefuelQuantity] = useState(0);
@@ -23,6 +26,9 @@ export const RefuelExpense = () => {
     };
 
     idNumber++;
+    totalRefuelQuantity += refuelQuantity;
+    totalExpenses += priceOfRefuel;
+    totalRefuelDriveDistance += totalRefuelDriveDistance;
     refuelExpense(newRefuelExpense);
   };
 

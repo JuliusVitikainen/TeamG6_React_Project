@@ -25,7 +25,9 @@ export const AllExpenses = () => {
   );
 
   const expense =
-    priceOfRefuel.filter((item) => item < 0).reduce((acc, item) => (acc += item), 0) * -1;
+    priceOfRefuel
+      .filter((item) => item < 0)
+      .reduce((acc, item) => (acc += item), 0) * -1;
 
   return (
     <div className="exp-container">

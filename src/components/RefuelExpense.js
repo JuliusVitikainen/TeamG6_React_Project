@@ -9,7 +9,7 @@ export const RefuelExpense = () => {
   const [refuelDriveDistance, setRefuelDriveDistance] = useState(0);
   const [nameOfCar, setText] = useState("");
 
-  const { RefuelExpense } = useContext(GlobalContext);
+  const { refuelExpense } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -23,12 +23,12 @@ export const RefuelExpense = () => {
     };
 
     idNumber++;
-    RefuelExpense(newRefuelExpense);
+    refuelExpense(newRefuelExpense);
   };
 
   return (
     <>
-      <h3>Add new transaction</h3>
+      <h3>Add new refuel expense</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="refuelQuantity">Quantity for refuel</label>

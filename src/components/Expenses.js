@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { RefuelExpense, totalExpenses, totalRefuelDriveDistance, totalRefuelQuantity } from "./RefuelExpense";
+import {
+  RefuelExpense,
+  totalExpenses,
+  totalRefuelDriveDistance,
+  totalRefuelQuantity,
+} from "./RefuelExpense";
 
 //Money formatter function
 function moneyFormatter(num) {
@@ -34,17 +39,16 @@ export const Expenses = () => {
       <h1>{moneyFormatter(totalExpenses)}</h1>
       <br></br>
       <h4>Total Consumption</h4>
-      <h1>{(totalRefuelQuantity)}</h1>
+      <h1>{totalRefuelQuantity}</h1>
       <br></br>
       <h4>Total Refuel Drive Distance</h4>
-      <h1>{(totalRefuelDriveDistance)}</h1>
+      <h1>{totalRefuelDriveDistance}</h1>
       <br></br>
       <h4>Average expense per 100km</h4>
-      <h1>{(totalExpenses/100)}</h1>
+      <h1>{totalExpenses / 100}</h1>
       <br></br>
       <h4>Average consumption per 100km</h4>
-      <h1>{(totalRefuelQuantity/100)}</h1>
-      
+      <h1>{totalRefuelQuantity / 100}</h1>
     </>
   );
 };

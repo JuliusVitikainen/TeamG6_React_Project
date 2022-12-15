@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #6a6a6aa1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@ h4 {
 }
 
 .exp-container {
-  background-color: #b0a6a63c;
+  background-color: #0000003f;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -55,7 +55,7 @@ h4 {
 }
 
 .exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+  border-right: 1px solid #ffffff;
 }
 
 .money {
@@ -65,7 +65,7 @@ h4 {
 }
 
 .money.minus {
-  color: #c0392b;
+  color: #bb2818;
 }
 
 label {
@@ -75,7 +75,7 @@ label {
 
 input[type="text"],
 input[type="number"] {
-  border: 1px solid #dedede;
+  border: 1px solid #000000;
   border-radius: 2px;
   display: block;
   font-size: 16px;
@@ -85,9 +85,9 @@ input[type="number"] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #000000aa;
   box-shadow: var(--box-shadow);
-  color: #fff;
+  color: rgb(255, 255, 255);
   border: 0;
   display: block;
   font-size: 16px;
